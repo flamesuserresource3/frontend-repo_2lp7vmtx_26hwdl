@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import GlassButton from './GlassButton';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
@@ -64,12 +65,7 @@ export default function Contact() {
             />
           </div>
           <div className="flex items-center justify-between">
-            <button
-              type="submit"
-              className="rounded-full bg-white px-6 py-3 font-medium text-black transition hover:bg-white/90"
-            >
-              Send Message
-            </button>
+            <GlassButton type="submit">Send Message</GlassButton>
             {sent && <span className="text-sm text-emerald-400">Thanks! I’ll get back to you soon.</span>}
           </div>
         </form>
